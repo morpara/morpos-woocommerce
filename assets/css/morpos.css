@@ -1,0 +1,90 @@
+.morpos-content {
+    padding: 12px 0;
+    background: none
+}
+
+.morpos-desc {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5
+}
+
+.morpos-alert {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: #fffdf5;
+    border: 1px solid #ffe3a1;
+    color: #7a4d00;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 13px;
+    margin-top: 12px
+}
+
+.morpos-alert-ico {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    border-radius: 50%;
+    background: #ffc107;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3d2b00;
+    font-weight: 800
+}
+
+.morpos-label-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.morpos-label-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.morpos-label-logos img {
+    height: 22px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px
+}
+
+/* Payment method icon and alignment fix */
+.payment_method_morpos label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.payment_method_morpos label::before {
+    flex-shrink: 0 !important;
+    order: -2 !important;
+}
+
+.payment_method_morpos label img {
+    max-height: 24px !important;
+    width: auto !important;
+    flex-shrink: 0 !important;
+    order: -1 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .payment_method_morpos label img {
+        max-height: 20px !important;
+    }
+    
+    .payment_method_morpos label {
+        gap: 6px !important;
+    }
+}

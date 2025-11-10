@@ -1,0 +1,478 @@
+# Copyright (C) 2025 Morpara
+# This file is distributed under the same license as the MorPOS Payment Gateway plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: MorPOS Payment Gateway 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/morpos-gateway\n"
+"POT-Creation-Date: 2025-10-20T07:50:12+00:00\n"
+"PO-Revision-Date: 2025-10-20 10:51+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+"X-Domain: morpos\n"
+
+#. Plugin Name of the plugin
+#: morpos-gateway.php
+msgid "MorPOS for WooCommerce"
+msgstr "WooCommerce için MorPOS"
+
+#. Description of the plugin
+#: morpos-gateway.php
+msgid ""
+"MorPOS is a secure and easy-to-use payment gateway for WooCommerce, enabling "
+"businesses to accept credit and debit card payments online with ease."
+msgstr ""
+"MorPOS, işletmelerin çevrimiçi olarak kredi ve banka kartı ödemelerini "
+"kolayca kabul etmesini sağlayan, WooCommerce için güvenli ve kullanımı kolay "
+"bir ödeme altyapısıdır."
+
+#. Author of the plugin
+#: morpos-gateway.php
+msgid "Morpara"
+msgstr ""
+
+#. Author URI of the plugin
+#: morpos-gateway.php
+msgid "https://morpara.com/"
+msgstr ""
+
+#: includes/class-morpos-ajax.php:15
+msgid "Unauthorized"
+msgstr "Yetkisiz işlem"
+
+#: includes/class-morpos-ajax.php:29
+msgid "Please fill in all required fields."
+msgstr "Lütfen tüm zorunlu alanları doldurun."
+
+#: includes/class-morpos-ajax.php:49 includes/class-wc-gateway-morpos.php:256
+#: assets/js/morpos-settings.js:45
+msgid "Connection successful."
+msgstr "Bağlantı başarılı."
+
+#: includes/class-morpos-ajax.php:53 assets/js/morpos-settings.js:45
+msgid "Connection failed."
+msgstr "Bağlantı başarısız."
+
+#: includes/class-morpos-api-client.php:55
+#: includes/class-morpos-api-client.php:124
+#: includes/class-morpos-api-client.php:156
+msgid "API Key not found."
+msgstr "API anahtarı bulunamadı."
+
+#: includes/class-morpos-api-client.php:129
+msgid "Conversation ID is required."
+msgstr "Conversation ID zorunludur."
+
+#: includes/class-wc-gateway-morpos.php:39
+msgid "MorPOS Payment Plugin"
+msgstr "MorPOS Ödeme Eklentisi"
+
+#: includes/class-wc-gateway-morpos.php:40
+msgid ""
+"MorPOS WooCommerce is a virtual POS plugin specially developed for e-"
+"commerce websites built on the WooCommerce infrastructure. With this plugin, "
+"you can easily accept payments from your customers via credit or debit card "
+"— either in full or in installments — and integrate seamlessly with all "
+"banks. It is easy to install and requires no technical knowledge."
+msgstr ""
+"MorPOS WooCommerce, WooCommerce altyapısına sahip e-ticaret siteleri için "
+"özel olarak geliştirilmiş bir sanal POS eklentisidir. Bu eklenti sayesinde "
+"müşterilerinizden kredi veya banka kartı ile tek çekim ya da taksitli ödeme "
+"alabilir, tüm bankalarla kolayca entegre olabilirsiniz. Kurulumu son derece "
+"basittir ve teknik bilgi gerektirmez."
+
+#: includes/class-wc-gateway-morpos.php:153
+msgid "Active/Inactive"
+msgstr "Aktif/Pasif"
+
+#: includes/class-wc-gateway-morpos.php:155
+msgid "Enable MorPOS"
+msgstr "MorPOS’u Etkinleştir"
+
+#: includes/class-wc-gateway-morpos.php:159
+msgid "Test Mode"
+msgstr "Test Modu"
+
+#: includes/class-wc-gateway-morpos.php:161
+msgid "Enable Sandbox (testing only)"
+msgstr "Sandbox’u Etkinleştir (sadece test için)"
+
+#: includes/class-wc-gateway-morpos.php:164
+msgid "Sandbox endpoints are used when enabled."
+msgstr "Etkinleştirildiğinde sandbox uç noktaları kullanılır."
+
+#: includes/class-wc-gateway-morpos.php:168
+msgid "Merchant ID"
+msgstr ""
+
+#: includes/class-wc-gateway-morpos.php:170
+msgid "Your Merchant ID"
+msgstr "Üye işyeri numarası"
+
+#: includes/class-wc-gateway-morpos.php:174
+msgid "Client ID"
+msgstr ""
+
+#: includes/class-wc-gateway-morpos.php:176
+msgid "Your Client ID"
+msgstr "Üye işyeri istemci numarası"
+
+#: includes/class-wc-gateway-morpos.php:180
+msgid "Client Secret"
+msgstr ""
+
+#: includes/class-wc-gateway-morpos.php:182
+msgid "Your Client Secret"
+msgstr "Üye işyeri gizli anahtarı"
+
+#: includes/class-wc-gateway-morpos.php:186
+msgid "API Key"
+msgstr ""
+
+#: includes/class-wc-gateway-morpos.php:188
+msgid "Your API Key"
+msgstr "Üye işyeri API anahtarı"
+
+#: includes/class-wc-gateway-morpos.php:197
+msgid "Payment Method"
+msgstr "Ödeme Yöntemi"
+
+#: includes/class-wc-gateway-morpos.php:200
+msgid "Hosted Payment Page (Default)"
+msgstr ""
+
+#: includes/class-wc-gateway-morpos.php:201
+msgid "Embedded Payment"
+msgstr ""
+
+#: includes/class-wc-gateway-morpos.php:248
+#, php-format
+msgid "Connection failed: %s"
+msgstr "Bağlantı başarısız: %s"
+
+#: includes/class-wc-gateway-morpos.php:248
+msgid "Invalid credentials"
+msgstr "Geçersiz kimlik bilgileri"
+
+#: includes/class-wc-gateway-morpos.php:277
+#: includes/class-wc-gateway-morpos.php:318
+#: includes/class-wc-gateway-morpos.php:541
+msgid "Order not found."
+msgstr "Sipariş bulunamadı."
+
+#: includes/class-wc-gateway-morpos.php:295
+msgid "MorPOS: Hosted Payment initiated, customer redirected."
+msgstr "MorPOS: Barındırılan Ödeme başlatıldı, müşteri yönlendirildi."
+
+#: includes/class-wc-gateway-morpos.php:366
+msgid ""
+"An error occurred while initiating the payment. Please try again. If the "
+"problem persists, contact support."
+msgstr ""
+"Ödeme başlatılırken bir hata oluştu. Lütfen tekrar deneyin. Sorun devam "
+"ederse destek ekibiyle iletişime geçin."
+
+#: includes/class-wc-gateway-morpos.php:378
+msgid ""
+"Embedded payment form could not be obtained. Please try again. If the "
+"problem persists, contact support."
+msgstr ""
+"Ödeme formu alınamadı. Lütfen tekrar deneyin. Sorun devam ederse destek "
+"ekibiyle iletişime geçin."
+
+#: includes/class-wc-gateway-morpos.php:388
+msgid ""
+"Payment redirect URL could not be obtained. Please try again. If the problem "
+"persists, contact support."
+msgstr ""
+"Ödeme yönlendirme adresi alınamadı. Lütfen tekrar deneyin. Sorun devam "
+"ederse destek ekibiyle iletişime geçin."
+
+#: includes/class-wc-gateway-morpos.php:548
+msgid "Order key could not be verified."
+msgstr "Sipariş anahtarı doğrulanamadı."
+
+#: includes/class-wc-gateway-morpos.php:572
+msgid "MorPOS return parameters:"
+msgstr "MorPOS dönüş parametreleri:"
+
+#: includes/class-wc-gateway-morpos.php:581
+msgid "Card"
+msgstr "Kart"
+
+#: includes/class-wc-gateway-morpos.php:582
+msgid "Installment"
+msgstr "Taksit"
+
+#: includes/class-wc-gateway-morpos.php:598
+msgid "MorPOS: Payment SUCCESSFUL."
+msgstr "MorPOS: Ödeme BAŞARILI."
+
+#: includes/class-wc-gateway-morpos.php:601
+msgid "Payment successful."
+msgstr "Ödeme başarılı."
+
+#: includes/class-wc-gateway-morpos.php:604
+msgid "MorPOS: Payment FAILED."
+msgstr "MorPOS: Ödeme BAŞARISIZ."
+
+#: includes/class-wc-gateway-morpos.php:607
+msgid "Payment failed. Please try again."
+msgstr "Ödeme başarısız. Lütfen tekrar deneyin."
+
+#: includes/class-wc-gateway-morpos.php:608
+msgid "Payment failed"
+msgstr "Ödeme başarısız"
+
+#: includes/class-wc-gateway-morpos.php:656
+msgid "Not detected"
+msgstr "Bulunamadı"
+
+#: includes/class-wc-gateway-morpos.php:660
+msgid "Below required"
+msgstr "Yetersiz"
+
+#: includes/class-wc-gateway-morpos.php:664
+msgid "Allowed but discouraged"
+msgstr "İzin veriliyor ancak önerilmez"
+
+#: includes/class-wc-gateway-morpos.php:667
+#: includes/class-wc-gateway-morpos.php:683
+msgid "Meets recommended"
+msgstr "Önerilen seviyede"
+
+#: includes/class-wc-gateway-morpos.php:672
+msgid "Unable to verify TLS support"
+msgstr "TLS desteği doğrulanamadı"
+
+#: includes/class-wc-gateway-morpos.php:676
+msgid "Does not meet minimum TLS requirements"
+msgstr "Minimum TLS gereksinimleri karşılanmıyor"
+
+#: includes/class-wc-gateway-morpos.php:680
+msgid "Works, but TLS 1.3 is recommended"
+msgstr "Çalışıyor, ancak TLS 1.3 önerilir"
+
+#: includes/class-wc-gateway-morpos.php:688
+msgid "PHP"
+msgstr ""
+
+#: includes/class-wc-gateway-morpos.php:695
+msgid "WordPress"
+msgstr ""
+
+#: includes/class-wc-gateway-morpos.php:702
+msgid "WooCommerce"
+msgstr ""
+
+#: includes/class-wc-gateway-morpos.php:703
+msgid "Not installed"
+msgstr "Yüklü değil"
+
+#: includes/class-wc-gateway-morpos.php:709
+msgid "TLS"
+msgstr ""
+
+#: includes/class-wc-gateway-morpos.php:710
+msgid "Unknown"
+msgstr "Bilinmiyor"
+
+#: includes/class-wc-gateway-morpos.php:719
+msgid "Requirements"
+msgstr "Gereksinimler"
+
+#: includes/class-wc-gateway-morpos.php:723
+msgid "Component"
+msgstr "Bileşen"
+
+#: includes/class-wc-gateway-morpos.php:724
+msgid "Current"
+msgstr "Mevcut"
+
+#: includes/class-wc-gateway-morpos.php:725
+msgid "Recommended"
+msgstr "Önerilen"
+
+#: includes/class-wc-gateway-morpos.php:726
+msgid "Required (minimum)"
+msgstr "Gerekli (minimum)"
+
+#: includes/class-wc-gateway-morpos.php:727
+msgid "Status"
+msgstr "Durum"
+
+#: includes/class-wc-gateway-morpos.php:755
+msgid "Usable, but please upgrade to improve performance and security."
+msgstr ""
+"Kullanılabilir, ancak performans ve güvenliği artırmak için lütfen yükseltin."
+
+#: includes/class-wc-gateway-morpos.php:760
+msgid ""
+"Payments cannot be processed until the server supports TLS 1.2 or newer."
+msgstr ""
+"Sunucu TLS 1.2 veya daha yenisini destekleyene kadar ödemeler işlenemez."
+
+#: includes/helpers.php:79
+msgid "SSL/TLS available (version unknown)"
+msgstr "SSL/TLS kullanılabilir (sürümü bilinmiyor)"
+
+#: includes/helpers.php:81
+msgid "No SSL/TLS detected"
+msgstr "SSL/TLS tespit edilmedi"
+
+#: views/morpos-admin-options.php:6
+msgid "Version:"
+msgstr "Sürüm:"
+
+#: views/morpos-admin-options.php:16
+msgid "Setup"
+msgstr "Kurulum"
+
+#: views/morpos-admin-options.php:17
+msgid "Connection Successful"
+msgstr "Bağlantı Başarılı"
+
+#: views/morpos-admin-options.php:18
+msgid "Connection Failed"
+msgstr "Bağlantı Başarısız"
+
+#: views/morpos-admin-options.php:20 assets/js/morpos-settings.js:66
+msgid "Test Connection"
+msgstr "Bağlantıyı Test Et"
+
+#: views/morpos-admin-options.php:29
+msgid "System Requirements"
+msgstr "Sistem Gereksinimleri"
+
+#: views/morpos-admin-options.php:31
+msgid ""
+"The following table shows the current status of your server environment. "
+"Please ensure all requirements are met for optimal performance."
+msgstr ""
+"Aşağıdaki tablo, sunucu ortamınızın mevcut durumunu göstermektedir. En iyi "
+"performans için tüm gereksinimlerin karşılandığından emin olun."
+
+#: views/morpos-callback.php:21
+msgid "Processing your order…"
+msgstr "Siparişiniz işleniyor…"
+
+#: views/morpos-callback.php:22
+msgid ""
+"Please wait while we process your order. You will be redirected shortly."
+msgstr ""
+"Siparişiniz işlenirken lütfen bekleyin. Kısa süre içinde "
+"yönlendirileceksiniz."
+
+#: views/morpos-receipt.php:9
+msgid "Almost there"
+msgstr "Neredeyse bitti"
+
+#: views/morpos-receipt.php:12
+msgid ""
+"We’ve received your order. Please complete the payment to finish your "
+"purchase."
+msgstr "Siparişiniz hazır — tamamlamak için ödemeyi yapın."
+
+#: views/morpos-receipt.php:35
+msgid ""
+"<strong>Do not close this window</strong> until payment succeeds and you’re "
+"redirected."
+msgstr ""
+"Ödeme tamamlanıp yönlendirme gerçekleşene kadar <strong>bu pencereyi "
+"kapatmayın</strong>."
+
+#: assets/js/morpos-settings.js:24
+msgid "Testing…"
+msgstr "Test ediliyor…"
+
+#: assets/js/morpos-settings.js:52
+msgid "Connection error."
+msgstr "Bağlantı hatası."
+
+#: assets/js/morpos-settings.js:61
+msgid "Could not reach the server."
+msgstr "Sunucuya ulaşılamadı."
+
+#: assets/js/morpos.js:21
+msgid "You can make a payment using your credit or debit card."
+msgstr "Kredi ve banka kartı kullanarak ödeme yapabilirsiniz."
+
+#: assets/js/morpos.js:25
+msgid "Test Mode Enabled."
+msgstr "Test Modu Etkin."
+
+#: assets/js/morpos.js:26
+msgid "Transactions are simulated and not charged until test mode is disabled."
+msgstr ""
+"İşlemler yalnızca simülasyon amaçlıdır ve test modu devre dışı bırakılana "
+"kadar gerçek bir ücretlendirme yapılmaz."
+
+#: assets/js/morpos.js:34
+msgid "MorPOS"
+msgstr ""
+
+#: assets/js/morpos.js:35 assets/js/morpos.js:45
+msgid "Credit and Bank Card"
+msgstr "Kredi ve Banka Kartı"
+
+#: assets/js/morpos.js:38
+msgid "Supported Cards"
+msgstr "Desteklenen Kartlar"
+
+#~ msgid "Method"
+#~ msgstr "Yöntem"
+
+#~ msgid "Pay now"
+#~ msgstr "Hemen Öde"
+
+#~ msgid "Dismiss dialog"
+#~ msgstr "Pencereyi Kapat"
+
+#~ msgid "Complete your payment"
+#~ msgstr "Ödemeyi Tamamla"
+
+#~ msgid "MorPOS Payment Gateway"
+#~ msgstr "MorPOS Ödeme Eklentisi"
+
+#~ msgid "Credit/Debit Card (MorPOS)"
+#~ msgstr "Kredi/Banka Kartı (MorPOS)"
+
+#~ msgid ""
+#~ "Your payment will be securely processed through MorPOS using encrypted "
+#~ "SSL connections and PCI-DSS compliant systems."
+#~ msgstr ""
+#~ "Ödemeniz, şifrelenmiş SSL bağlantıları ve PCI-DSS uyumlu sistemler "
+#~ "kullanılarak MorPOS üzerinden güvenli bir şekilde işlenecektir."
+
+#~ msgid "Payment Title"
+#~ msgstr "Ödeme Başlığı"
+
+#~ msgid "Payment Description"
+#~ msgstr "Ödeme Açıklaması"
+
+#~ msgid "Your payment will be securely processed through MorPOS."
+#~ msgstr ""
+#~ "Ödemeniz MorPOS üzerinden güvenli bir şekilde gerçekleştirilecektir."
+
+#~ msgid ""
+#~ "API Key not found (provide it in the settings form or via filter/constant/"
+#~ "env)."
+#~ msgstr ""
+#~ "API Anahtarı bulunamadı (ayar formunda veya filtre/sabit/çevresel "
+#~ "değişken aracılığıyla belirtin)."
+
+#~ msgid "Payment could not be initiated"
+#~ msgstr "Ödeme başlatılamadı"
+
+#~ msgid "Embedded payment form could not be obtained."
+#~ msgstr "Gömülü ödeme formu alınamadı."
+
+#~ msgid "Payment redirect URL could not be obtained."
+#~ msgstr "Ödeme yönlendirme URL’si alınamadı."
+
+#~ msgid "awaiting payment"
+#~ msgstr "bekleyen ödeme"
