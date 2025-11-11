@@ -1,9 +1,9 @@
 # WooCommerce için MorPOS
 
 [![WordPress Plugin Version](https://img.shields.io/badge/WordPress-6.0%2B-blue.svg)](https://wordpress.org/)
-[![WooCommerce](https://img.shields.io/badge/WooCommerce-8.0%2B-purple.svg)](https://woocommerce.com/)
+[![WooCommerce](https://img.shields.io/badge/WooCommerce-7.0%2B-purple.svg)](https://woocommerce.com/)
 [![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-777bb4.svg)](https://php.net/)
-[![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 **WooCommerce için MorPOS**, **Morpara MorPOS** ödeme sistemini WooCommerce mağazalarıyla entegre eden güvenli ve kullanımı kolay bir ödeme geçidi eklentisidir. Müşteriler siparişlerini tamamlarken güvenli **Hosted Payment Page (HPP)** akışıyla yönlendirilir.
 
@@ -27,7 +27,7 @@
 | Bileşen | Minimum | Önerilen |
 |---------|---------|----------|
 | **WordPress** | 6.0 | 6.8+ |
-| **WooCommerce** | 8.0 | 10.0+ |
+| **WooCommerce** | 7.0 | 10.0+ |
 | **PHP** | 7.4 | 8.2+ |
 | **TLS** | 1.2 | 1.3 |
 
@@ -70,12 +70,12 @@
 
 1. **Eklentiyi İndirin**
    ```bash
-   git clone https://github.com/mrfade/morpos-woocommerce-gateway.git
+   git clone https://github.com/morpara/morpos-woocommerce.git
    ```
 
 2. **WordPress'e Yükleyin**
    ```bash
-   cp -r morpos-woocommerce-gateway/ /path/to/wordpress/wp-content/plugins/morpos-gateway/
+   cp -r morpos-woocommerce/ /path/to/wordpress/wp-content/plugins/morpos-gateway/
    ```
 
 3. **Eklentiyi Etkinleştirin**
@@ -89,7 +89,9 @@
 
 **WooCommerce** → **Ayarlar** → **Ödemeler** → **MorPOS** sayfasına gidin
 
-![MorPOS Settings](docs/images/settings-screenshot.png)
+<div align="center">
+  <img src="docs/images/morpos-settings-edit.png" alt="MorPOS Settings" width="600">
+</div>
 
 ### 2. Gerekli Ayarlar
 
@@ -236,8 +238,8 @@ Katkılarınızı bekliyoruz! Başlamak için:
 
 1. **Repository'yi Fork Edin**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/morpos-woocommerce-gateway.git
-   cd morpos-woocommerce-gateway
+   git clone https://github.com/YOUR_USERNAME/morpos-woocommerce.git
+   cd morpos-woocommerce
    ```
 
 2. **Yerel WordPress Kurun**
@@ -265,12 +267,12 @@ Katkılarınızı bekliyoruz! Başlamak için:
 
 ## 📄 Lisans
 
-Bu proje **GPL-2.0-or-later** Lisansı altında lisanslanmıştır - detaylar için [LICENSE](LICENSE) dosyasına bakın.
+Bu proje **MIT** Lisansı altında lisanslanmıştır - detaylar için [LICENSE](LICENSE) dosyasına bakın.
 
 ## 🆘 Destek
 
 - **Dokümantasyon**: Bu README ve kod içi yorumları kontrol edin
-- **Sorunlar**: [GitHub Issues](https://github.com/mrfade/morpos-woocommerce-gateway/issues)
+- **Sorunlar**: [GitHub Issues](https://github.com/morpara/morpos-woocommerce/issues)
 - **Topluluk**: [WordPress Destek Forumu](https://wordpress.org/support/plugin/morpos-gateway/)
 - **İletişim**: [Morpara Destek](https://morpara.com/support)
 

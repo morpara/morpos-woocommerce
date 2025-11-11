@@ -1,9 +1,9 @@
 # MorPOS for WooCommerce
 
 [![WordPress Plugin Version](https://img.shields.io/badge/WordPress-6.0%2B-blue.svg)](https://wordpress.org/)
-[![WooCommerce](https://img.shields.io/badge/WooCommerce-8.0%2B-purple.svg)](https://woocommerce.com/)
+[![WooCommerce](https://img.shields.io/badge/WooCommerce-7.0%2B-purple.svg)](https://woocommerce.com/)
 [![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-777bb4.svg)](https://php.net/)
-[![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 **MorPOS for WooCommerce** is a secure and easy-to-use payment gateway plugin that integrates the **Morpara MorPOS** payment system with WooCommerce stores. Customers are redirected through a secure **Hosted Payment Page (HPP)** flow when completing their orders.
 
@@ -27,7 +27,7 @@
 | Component | Minimum | Recommended |
 |-----------|---------|-------------|
 | **WordPress** | 6.0 | 6.8+ |
-| **WooCommerce** | 8.0 | 10.0+ |
+| **WooCommerce** | 7.0 | 10.0+ |
 | **PHP** | 7.4 | 8.2+ |
 | **TLS** | 1.2 | 1.3 |
 
@@ -70,12 +70,12 @@
 
 1. **Download the Plugin**
    ```bash
-   git clone https://github.com/mrfade/morpos-woocommerce-gateway.git
+   git clone https://github.com/morpara/morpos-woocommerce.git
    ```
 
 2. **Upload to WordPress**
    ```bash
-   cp -r morpos-woocommerce-gateway/ /path/to/wordpress/wp-content/plugins/morpos-gateway/
+   cp -r morpos-woocommerce/ /path/to/wordpress/wp-content/plugins/morpos-gateway/
    ```
 
 3. **Activate the Plugin**
@@ -89,7 +89,9 @@
 
 Navigate to **WooCommerce** → **Settings** → **Payments** → **MorPOS**
 
-![MorPOS Settings](docs/images/settings-screenshot.png)
+<div align="center">
+  <img src="docs/images/morpos-settings-edit.png" alt="MorPOS Settings" width="600">
+</div>
 
 ### 2. Required Settings
 
@@ -236,8 +238,8 @@ We welcome contributions! Here's how to get started:
 
 1. **Fork the Repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/morpos-woocommerce-gateway.git
-   cd morpos-woocommerce-gateway
+   git clone https://github.com/YOUR_USERNAME/morpos-woocommerce.git
+   cd morpos-woocommerce
    ```
 
 2. **Set Up Local WordPress**
@@ -265,12 +267,12 @@ We welcome contributions! Here's how to get started:
 
 ## 📄 License
 
-This project is licensed under the **GPL-2.0-or-later** License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT** License - see the [LICENSE](LICENSE) file for details.
 
 ## 🆘 Support
 
 - **Documentation**: Check this README and inline code comments
-- **Issues**: [GitHub Issues](https://github.com/mrfade/morpos-woocommerce-gateway/issues)
+- **Issues**: [GitHub Issues](https://github.com/morpara/morpos-woocommerce/issues)
 - **Community**: [WordPress Support Forum](https://wordpress.org/support/plugin/morpos-gateway/)
 - **Contact**: [Morpara Support](https://morpara.com/support)
 
