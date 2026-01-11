@@ -1,18 +1,18 @@
-# Copyright (C) 2025 Morpara
+# Copyright (C) 2026 Morpara
 # This file is distributed under the same license as the MorPOS for WooCommerce plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: MorPOS for WooCommerce 1.0.0\n"
+"Project-Id-Version: MorPOS for WooCommerce 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/morpos-gateway\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-10-20T07:50:12+00:00\n"
+"POT-Creation-Date: 2026-01-11T22:14:55+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: morpos\n"
+"X-Domain: morpos-for-woocommerce\n"
 
 #. Plugin Name of the plugin
 #: morpos-gateway.php
@@ -43,7 +43,7 @@ msgid "Please fill in all required fields."
 msgstr ""
 
 #: includes/class-morpos-ajax.php:49
-#: includes/class-wc-gateway-morpos.php:256
+#: includes/class-morpos-gateway.php:245
 #: assets/js/morpos-settings.js:45
 msgid "Connection successful."
 msgstr ""
@@ -63,228 +63,206 @@ msgstr ""
 msgid "Conversation ID is required."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:39
+#: includes/class-morpos-gateway.php:39
 msgid "MorPOS Payment Plugin"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:40
+#: includes/class-morpos-gateway.php:40
 msgid "MorPOS WooCommerce is a virtual POS plugin specially developed for e-commerce websites built on the WooCommerce infrastructure. With this plugin, you can easily accept payments from your customers via credit or debit card — either in full or in installments — and integrate seamlessly with all banks. It is easy to install and requires no technical knowledge."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:153
+#: includes/class-morpos-gateway.php:48
+#: assets/js/morpos.js:35
+#: assets/js/morpos.js:45
+msgid "Credit and Bank Card"
+msgstr ""
+
+#: includes/class-morpos-gateway.php:140
 msgid "Active/Inactive"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:155
+#: includes/class-morpos-gateway.php:142
 msgid "Enable MorPOS"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:159
+#: includes/class-morpos-gateway.php:146
 msgid "Test Mode"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:161
+#: includes/class-morpos-gateway.php:148
 msgid "Enable Sandbox (testing only)"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:164
+#: includes/class-morpos-gateway.php:151
 msgid "Sandbox endpoints are used when enabled."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:168
+#: includes/class-morpos-gateway.php:155
 msgid "Merchant ID"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:170
+#: includes/class-morpos-gateway.php:157
 msgid "Your Merchant ID"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:174
+#: includes/class-morpos-gateway.php:161
 msgid "Client ID"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:176
+#: includes/class-morpos-gateway.php:163
 msgid "Your Client ID"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:180
+#: includes/class-morpos-gateway.php:167
 msgid "Client Secret"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:182
+#: includes/class-morpos-gateway.php:169
 msgid "Your Client Secret"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:186
+#: includes/class-morpos-gateway.php:173
 msgid "API Key"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:188
+#: includes/class-morpos-gateway.php:175
 msgid "Your API Key"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:197
+#: includes/class-morpos-gateway.php:184
 msgid "Payment Method"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:200
+#: includes/class-morpos-gateway.php:187
 msgid "Hosted Payment Page (Default)"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:201
+#: includes/class-morpos-gateway.php:188
 msgid "Embedded Payment"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:248
+#: includes/class-morpos-gateway.php:237
 #, php-format
 msgid "Connection failed: %s"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:248
+#: includes/class-morpos-gateway.php:237
 msgid "Invalid credentials"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:277
-#: includes/class-wc-gateway-morpos.php:318
-#: includes/class-wc-gateway-morpos.php:541
+#: includes/class-morpos-gateway.php:309
+#: includes/class-morpos-gateway.php:355
+#: includes/class-morpos-gateway.php:574
 msgid "Order not found."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:295
+#: includes/class-morpos-gateway.php:332
 msgid "MorPOS: Hosted Payment initiated, customer redirected."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:366
+#: includes/class-morpos-gateway.php:405
 msgid "An error occurred while initiating the payment. Please try again. If the problem persists, contact support."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:378
+#: includes/class-morpos-gateway.php:416
 msgid "Embedded payment form could not be obtained. Please try again. If the problem persists, contact support."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:388
+#: includes/class-morpos-gateway.php:425
 msgid "Payment redirect URL could not be obtained. Please try again. If the problem persists, contact support."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:548
+#: includes/class-morpos-gateway.php:579
 msgid "Order key could not be verified."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:572
+#: includes/class-morpos-gateway.php:597
+msgid "Conversation ID could not be verified."
+msgstr ""
+
+#: includes/class-morpos-gateway.php:606
 msgid "MorPOS return parameters:"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:581
+#: includes/class-morpos-gateway.php:616
 msgid "Card"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:582
+#: includes/class-morpos-gateway.php:620
 msgid "Installment"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:598
+#: includes/class-morpos-gateway.php:643
 msgid "MorPOS: Payment SUCCESSFUL."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:601
+#: includes/class-morpos-gateway.php:646
 msgid "Payment successful."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:604
+#: includes/class-morpos-gateway.php:650
 msgid "MorPOS: Payment FAILED."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:607
+#: includes/class-morpos-gateway.php:653
 msgid "Payment failed. Please try again."
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:608
+#: includes/class-morpos-gateway.php:655
 msgid "Payment failed"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:656
+#: includes/class-morpos-gateway.php:709
 msgid "Not detected"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:660
+#: includes/class-morpos-gateway.php:713
 msgid "Below required"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:664
+#: includes/class-morpos-gateway.php:717
 msgid "Allowed but discouraged"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:667
-#: includes/class-wc-gateway-morpos.php:683
+#: includes/class-morpos-gateway.php:720
+#: includes/class-morpos-gateway.php:736
 msgid "Meets recommended"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:672
+#: includes/class-morpos-gateway.php:725
 msgid "Unable to verify TLS support"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:676
+#: includes/class-morpos-gateway.php:729
 msgid "Does not meet minimum TLS requirements"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:680
+#: includes/class-morpos-gateway.php:733
 msgid "Works, but TLS 1.3 is recommended"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:688
+#: includes/class-morpos-gateway.php:741
 msgid "PHP"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:695
+#: includes/class-morpos-gateway.php:748
 msgid "WordPress"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:702
+#: includes/class-morpos-gateway.php:755
 msgid "WooCommerce"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:703
+#: includes/class-morpos-gateway.php:756
 msgid "Not installed"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:709
+#: includes/class-morpos-gateway.php:762
 msgid "TLS"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:710
+#: includes/class-morpos-gateway.php:763
 msgid "Unknown"
-msgstr ""
-
-#: includes/class-wc-gateway-morpos.php:719
-msgid "Requirements"
-msgstr ""
-
-#: includes/class-wc-gateway-morpos.php:723
-msgid "Component"
-msgstr ""
-
-#: includes/class-wc-gateway-morpos.php:724
-msgid "Current"
-msgstr ""
-
-#: includes/class-wc-gateway-morpos.php:725
-msgid "Recommended"
-msgstr ""
-
-#: includes/class-wc-gateway-morpos.php:726
-msgid "Required (minimum)"
-msgstr ""
-
-#: includes/class-wc-gateway-morpos.php:727
-msgid "Status"
-msgstr ""
-
-#: includes/class-wc-gateway-morpos.php:755
-msgid "Usable, but please upgrade to improve performance and security."
-msgstr ""
-
-#: includes/class-wc-gateway-morpos.php:760
-msgid "Payments cannot be processed until the server supports TLS 1.2 or newer."
 msgstr ""
 
 #: includes/helpers.php:79
@@ -295,53 +273,89 @@ msgstr ""
 msgid "No SSL/TLS detected"
 msgstr ""
 
-#: views/morpos-admin-options.php:6
+#: views/morpos-admin-options.php:11
 msgid "Version:"
 msgstr ""
 
-#: views/morpos-admin-options.php:16
+#: views/morpos-admin-options.php:21
 msgid "Setup"
 msgstr ""
 
-#: views/morpos-admin-options.php:17
+#: views/morpos-admin-options.php:22
 msgid "Connection Successful"
 msgstr ""
 
-#: views/morpos-admin-options.php:18
+#: views/morpos-admin-options.php:23
 msgid "Connection Failed"
 msgstr ""
 
-#: views/morpos-admin-options.php:20
+#: views/morpos-admin-options.php:25
 #: assets/js/morpos-settings.js:66
 msgid "Test Connection"
 msgstr ""
 
-#: views/morpos-admin-options.php:29
+#: views/morpos-admin-options.php:34
 msgid "System Requirements"
 msgstr ""
 
-#: views/morpos-admin-options.php:31
+#: views/morpos-admin-options.php:36
 msgid "The following table shows the current status of your server environment. Please ensure all requirements are met for optimal performance."
 msgstr ""
 
-#: views/morpos-callback.php:21
+#: views/morpos-callback.php:33
+msgid "Processing…"
+msgstr ""
+
+#: views/morpos-callback.php:37
 msgid "Processing your order…"
 msgstr ""
 
-#: views/morpos-callback.php:22
+#: views/morpos-callback.php:38
 msgid "Please wait while we process your order. You will be redirected shortly."
 msgstr ""
 
-#: views/morpos-receipt.php:9
+#: views/morpos-receipt.php:18
 msgid "Almost there"
 msgstr ""
 
-#: views/morpos-receipt.php:12
+#: views/morpos-receipt.php:21
 msgid "We’ve received your order. Please complete the payment to finish your purchase."
 msgstr ""
 
-#: views/morpos-receipt.php:35
+#: views/morpos-receipt.php:43
 msgid "<strong>Do not close this window</strong> until payment succeeds and you’re redirected."
+msgstr ""
+
+#: views/morpos-requirements-table.php:7
+msgid "Requirements"
+msgstr ""
+
+#: views/morpos-requirements-table.php:11
+msgid "Component"
+msgstr ""
+
+#: views/morpos-requirements-table.php:12
+msgid "Current"
+msgstr ""
+
+#: views/morpos-requirements-table.php:13
+msgid "Recommended"
+msgstr ""
+
+#: views/morpos-requirements-table.php:14
+msgid "Required (minimum)"
+msgstr ""
+
+#: views/morpos-requirements-table.php:15
+msgid "Status"
+msgstr ""
+
+#: views/morpos-requirements-table.php:43
+msgid "Usable, but please upgrade to improve performance and security."
+msgstr ""
+
+#: views/morpos-requirements-table.php:48
+msgid "Payments cannot be processed until the server supports TLS 1.2 or newer."
 msgstr ""
 
 #: assets/js/morpos-settings.js:24
@@ -370,11 +384,6 @@ msgstr ""
 
 #: assets/js/morpos.js:34
 msgid "MorPOS"
-msgstr ""
-
-#: assets/js/morpos.js:35
-#: assets/js/morpos.js:45
-msgid "Credit and Bank Card"
 msgstr ""
 
 #: assets/js/morpos.js:38

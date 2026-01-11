@@ -21,7 +21,7 @@ jQuery(function ($) {
 
   $('.morpos-test-btn').on('click', function () {
     const $btn = $(this);
-    $btn.prop('disabled', true).text(__('Testing…', 'morpos'));
+    $btn.prop('disabled', true).text(__('Testing…', 'morpos-for-woocommerce'));
 
     const credentials = {
       merchant_id: readField(MorPOSAdmin.fields.merchant_id),
@@ -42,14 +42,14 @@ jQuery(function ($) {
         setStatus(s);
         wp.data && wp.data.dispatch('core/notices')?.createNotice(
           s === 'ok' ? 'success' : 'error',
-          res.data.message || (s === 'ok' ? __('Connection successful.', 'morpos') : __('Connection failed.', 'morpos')),
+          res.data.message || (s === 'ok' ? __('Connection successful.', 'morpos-for-woocommerce') : __('Connection failed.', 'morpos-for-woocommerce')),
           { isDismissible: true }
         );
       } else {
         setStatus('fail');
         wp.data && wp.data.dispatch('core/notices')?.createNotice(
           'error',
-          res.data?.message || __('Connection error.', 'morpos'),
+          res.data?.message || __('Connection error.', 'morpos-for-woocommerce'),
           { isDismissible: true }
         );
       }
@@ -58,12 +58,12 @@ jQuery(function ($) {
       setStatus('fail');
       wp.data && wp.data.dispatch('core/notices')?.createNotice(
         'error',
-        __('Could not reach the server.', 'morpos'),
+        __('Could not reach the server.', 'morpos-for-woocommerce'),
         { isDismissible: true }
       );
     })
     .always(function () {
-      $btn.prop('disabled', false).text(__('Test Connection', 'morpos'));
+      $btn.prop('disabled', false).text(__('Test Connection', 'morpos-for-woocommerce'));
     });
   });
 

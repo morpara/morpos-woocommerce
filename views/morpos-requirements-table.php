@@ -1,13 +1,18 @@
+<?php
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+}
+?>
 <div class="morpos-reqs">
-  <div class="morpos-reqs__head"><?php echo esc_html__('Requirements', 'morpos'); ?></div>
+  <div class="morpos-reqs__head"><?php echo esc_html__('Requirements', 'morpos-for-woocommerce'); ?></div>
   <table>
     <thead>
       <tr>
-        <th><?php echo esc_html__('Component', 'morpos'); ?></th>
-        <th class="col-current"><?php echo esc_html__('Current', 'morpos'); ?></th>
-        <th><?php echo esc_html__('Recommended', 'morpos'); ?></th>
-        <th><?php echo esc_html__('Required (minimum)', 'morpos'); ?></th>
-        <th class="col-status"><?php echo esc_html__('Status', 'morpos'); ?></th>
+        <th><?php echo esc_html__('Component', 'morpos-for-woocommerce'); ?></th>
+        <th class="col-current"><?php echo esc_html__('Current', 'morpos-for-woocommerce'); ?></th>
+        <th><?php echo esc_html__('Recommended', 'morpos-for-woocommerce'); ?></th>
+        <th><?php echo esc_html__('Required (minimum)', 'morpos-for-woocommerce'); ?></th>
+        <th class="col-status"><?php echo esc_html__('Status', 'morpos-for-woocommerce'); ?></th>
       </tr>
     </thead>
     <tbody>
@@ -35,12 +40,12 @@
 
             <?php if ($r['status']['class'] === 'morpos-warning' && $r['label'] === 'PHP'): ?>
               <span
-                class="morpos-hint"><?php echo esc_html__('Usable, but please upgrade to improve performance and security.', 'morpos'); ?></span>
+                class="morpos-hint"><?php echo esc_html__('Usable, but please upgrade to improve performance and security.', 'morpos-for-woocommerce'); ?></span>
             <?php endif; ?>
 
             <?php if ($r['label'] === 'TLS' && $r['status']['class'] === 'morpos-danger'): ?>
               <span class="morpos-hint">
-                <?php echo esc_html__('Payments cannot be processed until the server supports TLS 1.2 or newer.', 'morpos'); ?>
+                <?php echo esc_html__('Payments cannot be processed until the server supports TLS 1.2 or newer.', 'morpos-for-woocommerce'); ?>
               </span>
             <?php endif; ?>
           </td>

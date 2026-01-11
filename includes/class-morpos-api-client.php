@@ -52,7 +52,7 @@ class MorPOS_API_Client
     public function create_payment(array $args): array
     {
         if ($this->api_key === '') {
-            return $this->errorResult(__('API Key not found.', 'morpos'));
+            return $this->errorResult(__('API Key not found.', 'morpos-for-woocommerce'));
         }
 
         $conversationId = (string) ($args['conversationId'] ?? morpos_generate_conversation_id());
@@ -121,12 +121,12 @@ class MorPOS_API_Client
     public function check_payment(array $args = []): array
     {
         if ($this->api_key === '') {
-            return $this->errorResult(__('API Key not found.', 'morpos'));
+            return $this->errorResult(__('API Key not found.', 'morpos-for-woocommerce'));
         }
 
         $conversationId = $args['conversationId'];
         if (!$conversationId) {
-            return $this->errorResult(__('Conversation ID is required.', 'morpos'));
+            return $this->errorResult(__('Conversation ID is required.', 'morpos-for-woocommerce'));
         }
 
         $sign = morpos_sign([
@@ -153,7 +153,7 @@ class MorPOS_API_Client
     public function make_test_connection(array $args = []): array
     {
         if ($this->api_key === '') {
-            return $this->errorResult(__('API Key not found.', 'morpos'));
+            return $this->errorResult(__('API Key not found.', 'morpos-for-woocommerce'));
         }
 
         $conversationId = (string) ($args['conversationId'] ?? morpos_generate_conversation_id());

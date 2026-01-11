@@ -76,9 +76,9 @@ function morpos_detect_tls_capability(): array
     } elseif ($curl_info && !empty($curl_info['ssl_version'])) {
         $label_parts[] = $curl_info['ssl_version'];
     } elseif ($curl_info && ($curl_info['features'] & CURL_VERSION_SSL)) {
-        $label_parts[] = __('SSL/TLS available (version unknown)', 'morpos');
+        $label_parts[] = __('SSL/TLS available (version unknown)', 'morpos-for-woocommerce');
     } else {
-        $label_parts[] = __('No SSL/TLS detected', 'morpos');
+        $label_parts[] = __('No SSL/TLS detected', 'morpos-for-woocommerce');
     }
 
     return [
@@ -244,4 +244,34 @@ function morpos_validate_conversation_id20_any($orderOrID, string $provided): bo
     }
 
     return false;
+}
+
+/**
+ * Add a WooCommerce notice and safely redirect.
+ *
+ * Ensures the WC session is properly initialized and saved before redirect,
+ * which is critical when called from WC API endpoints where the session
+ * might not be fully initialized.
+ *
+ * @param string $message Notice message.
+ * @param string $type    Notice type: 'success', 'error', or 'notice'.
+ * @param string $url     Redirect URL.
+ * @return never
+ */
+function morpos_add_notice_and_redirect(string $message, string $type, string $url): void
+{
+    // Ensure WC session is initialized and will persist the notice
+    if (function_exists('WC') && WC()->session && !WC()->session->has_session()) {
+        WC()->session->set_customer_session_cookie(true);
+    }
+
+    wc_add_notice($message, $type);
+
+    // Force session to save before redirect
+    if (function_exists('WC') && WC()->session) {
+        WC()->session->save_data();
+    }
+
+    wp_safe_redirect($url);
+    exit;
 }

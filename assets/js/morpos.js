@@ -18,12 +18,12 @@
 
   const Content = () =>
     h('div', { className: 'morpos-content' },
-      h('p', { className: 'morpos-desc' }, __('You can make a payment using your credit or debit card.', 'morpos')),
+      h('p', { className: 'morpos-desc' }, __('You can make a payment using your credit or debit card.', 'morpos-for-woocommerce')),
       testOn && h('div', { className: 'morpos-alert' },
         h('span', { className: 'morpos-alert-ico' }, '!'),
         h('div', null,
-          h('strong', null, __('Test Mode Enabled.', 'morpos')),
-          h('span', null, __('Transactions are simulated and not charged until test mode is disabled.', 'morpos'))
+          h('strong', null, __('Test Mode Enabled.', 'morpos-for-woocommerce')),
+          h('span', null, __('Transactions are simulated and not charged until test mode is disabled.', 'morpos-for-woocommerce'))
         )
       )
     );
@@ -31,18 +31,18 @@
   const Label = () =>
     h('span', { className: 'morpos-label-wrap' },
       h('div', { className: 'morpos-label-left' },
-        h('img', { src: morposLogoUrl, alt: __('MorPOS', 'morpos'), loading: 'lazy', style: { height: '22px', borderRadius: '4px' } }),
-        h('span', null, __('Credit and Bank Card', 'morpos'))
+        h('img', { src: morposLogoUrl, alt: __('MorPOS', 'morpos-for-woocommerce'), loading: 'lazy', style: { height: '22px', borderRadius: '4px' } }),
+        h('span', null, __('Credit and Bank Card', 'morpos-for-woocommerce'))
       ),
       h('div', { className: 'morpos-label-logos' },
-        h('img', { src: cardsStripUrl, alt: __('Supported Cards', 'morpos'), loading: 'lazy' })
+        h('img', { src: cardsStripUrl, alt: __('Supported Cards', 'morpos-for-woocommerce'), loading: 'lazy' })
       )
     );
 
   registry.registerPaymentMethod({
     name: 'morpos',
     label: h(Label),
-    ariaLabel: __('Credit and Bank Card', 'morpos'),
+    ariaLabel: __('Credit and Bank Card', 'morpos-for-woocommerce'),
     content: h(Content),
     edit: h(Content),
     canMakePayment: () => true,

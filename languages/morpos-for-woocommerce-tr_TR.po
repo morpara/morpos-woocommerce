@@ -1,11 +1,9 @@
-# Copyright (C) 2025 Morpara
-# This file is distributed under the same license as the MorPOS Payment Gateway plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: MorPOS Payment Gateway 1.0.0\n"
+"Project-Id-Version: MorPOS Payment Gateway 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/morpos-gateway\n"
-"POT-Creation-Date: 2025-10-20T07:50:12+00:00\n"
-"PO-Revision-Date: 2025-10-20 10:51+0300\n"
+"POT-Creation-Date: 2026-01-11T22:14:55+00:00\n"
+"PO-Revision-Date: 2026-01-12 01:16+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: tr_TR\n"
@@ -48,7 +46,7 @@ msgstr "Yetkisiz işlem"
 msgid "Please fill in all required fields."
 msgstr "Lütfen tüm zorunlu alanları doldurun."
 
-#: includes/class-morpos-ajax.php:49 includes/class-wc-gateway-morpos.php:256
+#: includes/class-morpos-ajax.php:49 includes/class-morpos-gateway.php:245
 #: assets/js/morpos-settings.js:45
 msgid "Connection successful."
 msgstr "Bağlantı başarılı."
@@ -65,13 +63,13 @@ msgstr "API anahtarı bulunamadı."
 
 #: includes/class-morpos-api-client.php:129
 msgid "Conversation ID is required."
-msgstr "Conversation ID zorunludur."
+msgstr "Sipariş anahtarı zorunludur."
 
-#: includes/class-wc-gateway-morpos.php:39
+#: includes/class-morpos-gateway.php:39
 msgid "MorPOS Payment Plugin"
 msgstr "MorPOS Ödeme Eklentisi"
 
-#: includes/class-wc-gateway-morpos.php:40
+#: includes/class-morpos-gateway.php:40
 msgid ""
 "MorPOS WooCommerce is a virtual POS plugin specially developed for e-"
 "commerce websites built on the WooCommerce infrastructure. With this plugin, "
@@ -85,90 +83,94 @@ msgstr ""
 "alabilir, tüm bankalarla kolayca entegre olabilirsiniz. Kurulumu son derece "
 "basittir ve teknik bilgi gerektirmez."
 
-#: includes/class-wc-gateway-morpos.php:153
+#: includes/class-morpos-gateway.php:48 assets/js/morpos.js:35
+#: assets/js/morpos.js:45
+msgid "Credit and Bank Card"
+msgstr "Kredi ve Banka Kartı"
+
+#: includes/class-morpos-gateway.php:140
 msgid "Active/Inactive"
 msgstr "Aktif/Pasif"
 
-#: includes/class-wc-gateway-morpos.php:155
+#: includes/class-morpos-gateway.php:142
 msgid "Enable MorPOS"
 msgstr "MorPOS’u Etkinleştir"
 
-#: includes/class-wc-gateway-morpos.php:159
+#: includes/class-morpos-gateway.php:146
 msgid "Test Mode"
 msgstr "Test Modu"
 
-#: includes/class-wc-gateway-morpos.php:161
+#: includes/class-morpos-gateway.php:148
 msgid "Enable Sandbox (testing only)"
 msgstr "Sandbox’u Etkinleştir (sadece test için)"
 
-#: includes/class-wc-gateway-morpos.php:164
+#: includes/class-morpos-gateway.php:151
 msgid "Sandbox endpoints are used when enabled."
 msgstr "Etkinleştirildiğinde sandbox uç noktaları kullanılır."
 
-#: includes/class-wc-gateway-morpos.php:168
+#: includes/class-morpos-gateway.php:155
 msgid "Merchant ID"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:170
+#: includes/class-morpos-gateway.php:157
 msgid "Your Merchant ID"
 msgstr "Üye işyeri numarası"
 
-#: includes/class-wc-gateway-morpos.php:174
+#: includes/class-morpos-gateway.php:161
 msgid "Client ID"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:176
+#: includes/class-morpos-gateway.php:163
 msgid "Your Client ID"
 msgstr "Üye işyeri istemci numarası"
 
-#: includes/class-wc-gateway-morpos.php:180
+#: includes/class-morpos-gateway.php:167
 msgid "Client Secret"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:182
+#: includes/class-morpos-gateway.php:169
 msgid "Your Client Secret"
 msgstr "Üye işyeri gizli anahtarı"
 
-#: includes/class-wc-gateway-morpos.php:186
+#: includes/class-morpos-gateway.php:173
 msgid "API Key"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:188
+#: includes/class-morpos-gateway.php:175
 msgid "Your API Key"
 msgstr "Üye işyeri API anahtarı"
 
-#: includes/class-wc-gateway-morpos.php:197
+#: includes/class-morpos-gateway.php:184
 msgid "Payment Method"
 msgstr "Ödeme Yöntemi"
 
-#: includes/class-wc-gateway-morpos.php:200
+#: includes/class-morpos-gateway.php:187
 msgid "Hosted Payment Page (Default)"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:201
+#: includes/class-morpos-gateway.php:188
 msgid "Embedded Payment"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:248
+#: includes/class-morpos-gateway.php:237
 #, php-format
 msgid "Connection failed: %s"
 msgstr "Bağlantı başarısız: %s"
 
-#: includes/class-wc-gateway-morpos.php:248
+#: includes/class-morpos-gateway.php:237
 msgid "Invalid credentials"
 msgstr "Geçersiz kimlik bilgileri"
 
-#: includes/class-wc-gateway-morpos.php:277
-#: includes/class-wc-gateway-morpos.php:318
-#: includes/class-wc-gateway-morpos.php:541
+#: includes/class-morpos-gateway.php:309 includes/class-morpos-gateway.php:355
+#: includes/class-morpos-gateway.php:574
 msgid "Order not found."
 msgstr "Sipariş bulunamadı."
 
-#: includes/class-wc-gateway-morpos.php:295
+#: includes/class-morpos-gateway.php:332
 msgid "MorPOS: Hosted Payment initiated, customer redirected."
 msgstr "MorPOS: Barındırılan Ödeme başlatıldı, müşteri yönlendirildi."
 
-#: includes/class-wc-gateway-morpos.php:366
+#: includes/class-morpos-gateway.php:405
 msgid ""
 "An error occurred while initiating the payment. Please try again. If the "
 "problem persists, contact support."
@@ -176,7 +178,7 @@ msgstr ""
 "Ödeme başlatılırken bir hata oluştu. Lütfen tekrar deneyin. Sorun devam "
 "ederse destek ekibiyle iletişime geçin."
 
-#: includes/class-wc-gateway-morpos.php:378
+#: includes/class-morpos-gateway.php:416
 msgid ""
 "Embedded payment form could not be obtained. Please try again. If the "
 "problem persists, contact support."
@@ -184,7 +186,7 @@ msgstr ""
 "Ödeme formu alınamadı. Lütfen tekrar deneyin. Sorun devam ederse destek "
 "ekibiyle iletişime geçin."
 
-#: includes/class-wc-gateway-morpos.php:388
+#: includes/class-morpos-gateway.php:425
 msgid ""
 "Payment redirect URL could not be obtained. Please try again. If the problem "
 "persists, contact support."
@@ -192,129 +194,97 @@ msgstr ""
 "Ödeme yönlendirme adresi alınamadı. Lütfen tekrar deneyin. Sorun devam "
 "ederse destek ekibiyle iletişime geçin."
 
-#: includes/class-wc-gateway-morpos.php:548
+#: includes/class-morpos-gateway.php:579
 msgid "Order key could not be verified."
 msgstr "Sipariş anahtarı doğrulanamadı."
 
-#: includes/class-wc-gateway-morpos.php:572
+#: includes/class-morpos-gateway.php:597
+msgid "Conversation ID could not be verified."
+msgstr "Sipariş anahtarı doğrulanamadı."
+
+#: includes/class-morpos-gateway.php:606
 msgid "MorPOS return parameters:"
 msgstr "MorPOS dönüş parametreleri:"
 
-#: includes/class-wc-gateway-morpos.php:581
+#: includes/class-morpos-gateway.php:616
 msgid "Card"
 msgstr "Kart"
 
-#: includes/class-wc-gateway-morpos.php:582
+#: includes/class-morpos-gateway.php:620
 msgid "Installment"
 msgstr "Taksit"
 
-#: includes/class-wc-gateway-morpos.php:598
+#: includes/class-morpos-gateway.php:643
 msgid "MorPOS: Payment SUCCESSFUL."
 msgstr "MorPOS: Ödeme BAŞARILI."
 
-#: includes/class-wc-gateway-morpos.php:601
+#: includes/class-morpos-gateway.php:646
 msgid "Payment successful."
 msgstr "Ödeme başarılı."
 
-#: includes/class-wc-gateway-morpos.php:604
+#: includes/class-morpos-gateway.php:650
 msgid "MorPOS: Payment FAILED."
 msgstr "MorPOS: Ödeme BAŞARISIZ."
 
-#: includes/class-wc-gateway-morpos.php:607
+#: includes/class-morpos-gateway.php:653
 msgid "Payment failed. Please try again."
 msgstr "Ödeme başarısız. Lütfen tekrar deneyin."
 
-#: includes/class-wc-gateway-morpos.php:608
+#: includes/class-morpos-gateway.php:655
 msgid "Payment failed"
 msgstr "Ödeme başarısız"
 
-#: includes/class-wc-gateway-morpos.php:656
+#: includes/class-morpos-gateway.php:709
 msgid "Not detected"
 msgstr "Bulunamadı"
 
-#: includes/class-wc-gateway-morpos.php:660
+#: includes/class-morpos-gateway.php:713
 msgid "Below required"
 msgstr "Yetersiz"
 
-#: includes/class-wc-gateway-morpos.php:664
+#: includes/class-morpos-gateway.php:717
 msgid "Allowed but discouraged"
 msgstr "İzin veriliyor ancak önerilmez"
 
-#: includes/class-wc-gateway-morpos.php:667
-#: includes/class-wc-gateway-morpos.php:683
+#: includes/class-morpos-gateway.php:720 includes/class-morpos-gateway.php:736
 msgid "Meets recommended"
 msgstr "Önerilen seviyede"
 
-#: includes/class-wc-gateway-morpos.php:672
+#: includes/class-morpos-gateway.php:725
 msgid "Unable to verify TLS support"
 msgstr "TLS desteği doğrulanamadı"
 
-#: includes/class-wc-gateway-morpos.php:676
+#: includes/class-morpos-gateway.php:729
 msgid "Does not meet minimum TLS requirements"
 msgstr "Minimum TLS gereksinimleri karşılanmıyor"
 
-#: includes/class-wc-gateway-morpos.php:680
+#: includes/class-morpos-gateway.php:733
 msgid "Works, but TLS 1.3 is recommended"
 msgstr "Çalışıyor, ancak TLS 1.3 önerilir"
 
-#: includes/class-wc-gateway-morpos.php:688
+#: includes/class-morpos-gateway.php:741
 msgid "PHP"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:695
+#: includes/class-morpos-gateway.php:748
 msgid "WordPress"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:702
+#: includes/class-morpos-gateway.php:755
 msgid "WooCommerce"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:703
+#: includes/class-morpos-gateway.php:756
 msgid "Not installed"
 msgstr "Yüklü değil"
 
-#: includes/class-wc-gateway-morpos.php:709
+#: includes/class-morpos-gateway.php:762
 msgid "TLS"
 msgstr ""
 
-#: includes/class-wc-gateway-morpos.php:710
+#: includes/class-morpos-gateway.php:763
 msgid "Unknown"
 msgstr "Bilinmiyor"
-
-#: includes/class-wc-gateway-morpos.php:719
-msgid "Requirements"
-msgstr "Gereksinimler"
-
-#: includes/class-wc-gateway-morpos.php:723
-msgid "Component"
-msgstr "Bileşen"
-
-#: includes/class-wc-gateway-morpos.php:724
-msgid "Current"
-msgstr "Mevcut"
-
-#: includes/class-wc-gateway-morpos.php:725
-msgid "Recommended"
-msgstr "Önerilen"
-
-#: includes/class-wc-gateway-morpos.php:726
-msgid "Required (minimum)"
-msgstr "Gerekli (minimum)"
-
-#: includes/class-wc-gateway-morpos.php:727
-msgid "Status"
-msgstr "Durum"
-
-#: includes/class-wc-gateway-morpos.php:755
-msgid "Usable, but please upgrade to improve performance and security."
-msgstr ""
-"Kullanılabilir, ancak performans ve güvenliği artırmak için lütfen yükseltin."
-
-#: includes/class-wc-gateway-morpos.php:760
-msgid ""
-"Payments cannot be processed until the server supports TLS 1.2 or newer."
-msgstr ""
-"Sunucu TLS 1.2 veya daha yenisini destekleyene kadar ödemeler işlenemez."
 
 #: includes/helpers.php:79
 msgid "SSL/TLS available (version unknown)"
@@ -324,31 +294,31 @@ msgstr "SSL/TLS kullanılabilir (sürümü bilinmiyor)"
 msgid "No SSL/TLS detected"
 msgstr "SSL/TLS tespit edilmedi"
 
-#: views/morpos-admin-options.php:6
+#: views/morpos-admin-options.php:11
 msgid "Version:"
 msgstr "Sürüm:"
 
-#: views/morpos-admin-options.php:16
+#: views/morpos-admin-options.php:21
 msgid "Setup"
 msgstr "Kurulum"
 
-#: views/morpos-admin-options.php:17
+#: views/morpos-admin-options.php:22
 msgid "Connection Successful"
 msgstr "Bağlantı Başarılı"
 
-#: views/morpos-admin-options.php:18
+#: views/morpos-admin-options.php:23
 msgid "Connection Failed"
 msgstr "Bağlantı Başarısız"
 
-#: views/morpos-admin-options.php:20 assets/js/morpos-settings.js:66
+#: views/morpos-admin-options.php:25 assets/js/morpos-settings.js:66
 msgid "Test Connection"
 msgstr "Bağlantıyı Test Et"
 
-#: views/morpos-admin-options.php:29
+#: views/morpos-admin-options.php:34
 msgid "System Requirements"
 msgstr "Sistem Gereksinimleri"
 
-#: views/morpos-admin-options.php:31
+#: views/morpos-admin-options.php:36
 msgid ""
 "The following table shows the current status of your server environment. "
 "Please ensure all requirements are met for optimal performance."
@@ -356,34 +326,73 @@ msgstr ""
 "Aşağıdaki tablo, sunucu ortamınızın mevcut durumunu göstermektedir. En iyi "
 "performans için tüm gereksinimlerin karşılandığından emin olun."
 
-#: views/morpos-callback.php:21
+#: views/morpos-callback.php:33
+msgid "Processing…"
+msgstr "İşleniyor…"
+
+#: views/morpos-callback.php:37
 msgid "Processing your order…"
 msgstr "Siparişiniz işleniyor…"
 
-#: views/morpos-callback.php:22
+#: views/morpos-callback.php:38
 msgid ""
 "Please wait while we process your order. You will be redirected shortly."
 msgstr ""
 "Siparişiniz işlenirken lütfen bekleyin. Kısa süre içinde "
 "yönlendirileceksiniz."
 
-#: views/morpos-receipt.php:9
+#: views/morpos-receipt.php:18
 msgid "Almost there"
 msgstr "Neredeyse bitti"
 
-#: views/morpos-receipt.php:12
+#: views/morpos-receipt.php:21
 msgid ""
 "We’ve received your order. Please complete the payment to finish your "
 "purchase."
 msgstr "Siparişiniz hazır — tamamlamak için ödemeyi yapın."
 
-#: views/morpos-receipt.php:35
+#: views/morpos-receipt.php:43
 msgid ""
 "<strong>Do not close this window</strong> until payment succeeds and you’re "
 "redirected."
 msgstr ""
 "Ödeme tamamlanıp yönlendirme gerçekleşene kadar <strong>bu pencereyi "
 "kapatmayın</strong>."
+
+#: views/morpos-requirements-table.php:7
+msgid "Requirements"
+msgstr "Gereksinimler"
+
+#: views/morpos-requirements-table.php:11
+msgid "Component"
+msgstr "Bileşen"
+
+#: views/morpos-requirements-table.php:12
+msgid "Current"
+msgstr "Mevcut"
+
+#: views/morpos-requirements-table.php:13
+msgid "Recommended"
+msgstr "Önerilen"
+
+#: views/morpos-requirements-table.php:14
+msgid "Required (minimum)"
+msgstr "Gerekli (minimum)"
+
+#: views/morpos-requirements-table.php:15
+msgid "Status"
+msgstr "Durum"
+
+#: views/morpos-requirements-table.php:43
+msgid "Usable, but please upgrade to improve performance and security."
+msgstr ""
+"Kullanılabilir, ancak performans ve güvenliği artırmak için lütfen yükseltin."
+
+#: views/morpos-requirements-table.php:48
+msgid ""
+"Payments cannot be processed until the server supports TLS 1.2 or newer."
+msgstr ""
+"Sunucu TLS 1.2 veya daha yenisini destekleyene kadar ödemeler işlenemez."
 
 #: assets/js/morpos-settings.js:24
 msgid "Testing…"
@@ -414,10 +423,6 @@ msgstr ""
 #: assets/js/morpos.js:34
 msgid "MorPOS"
 msgstr ""
-
-#: assets/js/morpos.js:35 assets/js/morpos.js:45
-msgid "Credit and Bank Card"
-msgstr "Kredi ve Banka Kartı"
 
 #: assets/js/morpos.js:38
 msgid "Supported Cards"
