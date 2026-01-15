@@ -4,7 +4,7 @@
  * Description: MorPOS is a secure and easy-to-use payment gateway for WooCommerce, enabling businesses to accept credit and debit card payments online with ease.
  * Author: Morpara
  * Author URI: https://morpara.com/
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires Plugins: woocommerce
  * Requires at least: 6.0
  * Tested up to: 6.8.3
@@ -12,7 +12,7 @@
  * PHP tested up to: 8.4
  * WC requires at least: 8.0
  * WC tested up to: 10.1
- * Text Domain: morpos
+ * Text Domain: morpos-for-woocommerce
  * Domain Path: /languages
  */
 
@@ -20,17 +20,17 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('MORPOS_GATEWAY_VERSION', '1.0.0');
+define('MORPOS_GATEWAY_VERSION', '1.0.1');
 define('MORPOS_GATEWAY_PATH', plugin_dir_path(__FILE__));
 define('MORPOS_GATEWAY_URL', plugin_dir_url(__FILE__));
 define('MORPOS_CONVERSATION_KEY', AUTH_SALT . '|' . SECURE_AUTH_SALT . '|morpos:v1');
 
 /**
- * WC MorPOS gateway plugin class.
+ * MorPOS gateway plugin class.
  *
- * @class WC_MorPOS_Loader
+ * @class MorPOS_Loader
  */
-class WC_MorPOS_Loader
+class MorPOS_Loader
 {
     /** minimum PHP version required by this plugin */
     public const MINIMUM_PHP_VERSION = '7.4.0';
@@ -59,7 +59,7 @@ class WC_MorPOS_Loader
     /** the plugin name, for displaying notices */
     public const PLUGIN_NAME = 'MorPOS for WooCommerce';
 
-    /** @var WC_MorPOS_Loader single instance of this class */
+    /** @var MorPOS_Loader single instance of this class */
     private static $instance;
 
     /**
@@ -81,6 +81,33 @@ class WC_MorPOS_Loader
 
         // AJAX handler for testing connection
         add_action('wp_ajax_morpos_test_connection', [MorPOS_Ajax::class, 'test_connection']);
+
+        // Register frontend scripts and styles early
+        add_action('init', [$this, 'register_frontend_assets']);
+    }
+
+    /**
+     * Register frontend assets (scripts and styles).
+     * They will be enqueued when needed.
+     */
+    public function register_frontend_assets()
+    {
+        // Register receipt page styles
+        wp_register_style(
+            'morpos-receipt',
+            MORPOS_GATEWAY_URL . 'assets/css/morpos-receipt.css',
+            [],
+            MORPOS_GATEWAY_VERSION
+        );
+
+        // Register receipt page script
+        wp_register_script(
+            'morpos-receipt',
+            MORPOS_GATEWAY_URL . 'assets/js/morpos-receipt.js',
+            [],
+            MORPOS_GATEWAY_VERSION,
+            true
+        );
     }
 
     /**
@@ -98,7 +125,7 @@ class WC_MorPOS_Loader
 
         // Load text domain for translations
         load_plugin_textdomain(
-            'morpos',
+            'morpos-for-woocommerce',
             false,
             dirname(plugin_basename(__FILE__)) . '/languages'
         );
@@ -128,7 +155,7 @@ class WC_MorPOS_Loader
         }
 
         if (('yes' === $hide_for_non_admin_users && current_user_can('manage_options')) || 'no' === $hide_for_non_admin_users) {
-            $gateways[] = 'WC_Gateway_MorPOS';
+            $gateways[] = 'MorPOS_Gateway';
         }
 
         return $gateways;
@@ -143,7 +170,7 @@ class WC_MorPOS_Loader
         require_once MORPOS_GATEWAY_PATH . 'includes/class-morpos-logger.php';
         require_once MORPOS_GATEWAY_PATH . 'includes/class-morpos-api-client.php';
         require_once MORPOS_GATEWAY_PATH . 'includes/class-morpos-ajax.php';
-        require_once MORPOS_GATEWAY_PATH . 'includes/class-wc-gateway-morpos.php';
+        require_once MORPOS_GATEWAY_PATH . 'includes/class-morpos-gateway.php';
     }
 
     /**
@@ -199,7 +226,7 @@ class WC_MorPOS_Loader
      * Gets the main plugin loader instance.
      * Ensures only one instance can be loaded.
      *
-     * @return \WC_MorPOS_Loader
+     * @return \MorPOS_Loader
      */
     public static function instance()
     {
@@ -212,4 +239,4 @@ class WC_MorPOS_Loader
 }
 
 // Initialize the plugin.
-WC_MorPOS_Loader::instance();
+MorPOS_Loader::instance();

@@ -44,7 +44,7 @@ class MorPOS_Payment_Method extends AbstractPaymentMethodType
         // Register script translations
         wp_set_script_translations(
             $this->name,
-            'morpos',
+            'morpos-for-woocommerce',
             MORPOS_GATEWAY_PATH . 'languages'
         );
 

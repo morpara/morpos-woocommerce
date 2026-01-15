@@ -12,7 +12,7 @@ class MorPOS_Ajax
     public static function test_connection()
     {
         if (!current_user_can('manage_woocommerce')) {
-            wp_send_json_error(['message' => __('Unauthorized', 'morpos')], 403);
+            wp_send_json_error(['message' => __('Unauthorized', 'morpos-for-woocommerce')], 403);
         }
 
         check_ajax_referer('morpos_admin', 'nonce');
@@ -26,7 +26,7 @@ class MorPOS_Ajax
 
         $isValid = array_reduce($fields, fn($carry, $field) => $carry && !empty($credentials[$field]), true);
         if (!$isValid) {
-            wp_send_json_error(['status' => 'fail', 'message' => __('Please fill in all required fields.', 'morpos')]);
+            wp_send_json_error(['status' => 'fail', 'message' => __('Please fill in all required fields.', 'morpos-for-woocommerce')]);
         }
 
         $api = new MorPOS_API_Client(
@@ -46,10 +46,10 @@ class MorPOS_Ajax
         update_option('woocommerce_morpos_settings', $settings);
 
         if ($ok) {
-            wp_send_json_success(['status' => 'ok', 'message' => __('Connection successful.', 'morpos')]);
+            wp_send_json_success(['status' => 'ok', 'message' => __('Connection successful.', 'morpos-for-woocommerce')]);
         }
 
         $errMsg = $result['error'] ?? ('HTTP ' . $result['http'] ?? 'Unknown error');
-        wp_send_json_error(['status' => 'fail', 'message' => __('Connection failed.', 'morpos') . ' ' . $errMsg]);
+        wp_send_json_error(['status' => 'fail', 'message' => __('Connection failed.', 'morpos-for-woocommerce') . ' ' . $errMsg]);
     }
 }
